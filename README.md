@@ -1,14 +1,31 @@
-# Welcome to your CDK TypeScript project!
+# Static Website Infra Stack
 
-This is a blank project for TypeScript development with CDK.
+A CDK Stack to construct static website infra.
 
-The `cdk.json` file tells the CDK Toolkit how to execute your app.
+## Requirements
 
-## Useful commands
+- Node.js
+- Yarn
+- AWS account
 
- * `npm run build`   compile typescript to js
- * `npm run watch`   watch for changes and compile
- * `npm run test`    perform the jest unit tests
- * `cdk deploy`      deploy this stack to your default AWS account/region
- * `cdk diff`        compare deployed stack with current state
- * `cdk synth`       emits the synthesized CloudFormation template
+## Usage
+
+### Setup
+```bash
+$ git clone https://github.com/HeRoMo/cdk-static-website.git
+$ cd cdk-static-website
+$ yarn
+```
+
+Configure *config/default.ts* for your website.
+
+### Deploy
+
+```bash
+$ yarn build
+$ cdk deploy
+```
+
+## LICENSE
+
+[MIT](LICENSE)
