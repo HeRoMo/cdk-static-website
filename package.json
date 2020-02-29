@@ -30,6 +30,7 @@
     "typescript": "~3.7.2"
   },
   "dependencies": {
+    "@aws-cdk/aws-s3": "^1.26.0",
     "@aws-cdk/core": "1.26.0",
     "config": "^3.3.0",
     "source-map-support": "^0.5.16"
