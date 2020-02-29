@@ -1,6 +1,10 @@
-const config = {
-  aws: {
-    s3Bucket: 'arn:aws:s3:::web-site-sample-01',
+import { ConfigDefinition } from '../lib/Config';
+
+const config: ConfigDefinition = {
+  webSite: {
+    domain: 'test.heromo.dev',
+    indexDocument: 'index.html',
+    errorDocument: '/errors/index.html',
   },
 };
 
