@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 import 'source-map-support/register';
 import * as cdk from '@aws-cdk/core';
-import { WebSiteStack } from '../lib/web-site-stack';
+import { WebSiteStack } from '../lib/WebSiteStack';
 
 import { CONFIG } from '../lib/Config';
 

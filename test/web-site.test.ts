@@ -1,7 +1,7 @@
 import { expect as expectCDK, matchTemplate, MatchStyle } from '@aws-cdk/assert';
 import * as cdk from '@aws-cdk/core';
 
-import WebSite = require('../lib/web-site-stack');
+import WebSite = require('../lib/WebSiteStack');
 
 test('Empty Stack', () => {
   const app = new cdk.App();
