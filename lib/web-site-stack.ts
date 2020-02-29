@@ -1,9 +1,24 @@
-import * as cdk from '@aws-cdk/core';
+import { Construct, Stack, StackProps } from '@aws-cdk/core';
+import { Bucket, CorsRule, HttpMethods } from '@aws-cdk/aws-s3';
 
-export class WebSiteStack extends cdk.Stack {
-  constructor(scope: cdk.Construct, id: string, props?: cdk.StackProps) {
+import { CONFIG } from './Config';
+
+export class WebSiteStack extends Stack {
+  constructor(scope: Construct, id: string, props?: StackProps) {
     super(scope, id, props);
 
-    // The code that defines your stack goes here
+    const cors: CorsRule = {
+      allowedMethods: [HttpMethods.GET],
+      allowedOrigins: ['*'],
+      allowedHeaders: ['*'],
+      maxAge: 3000,
+    };
+
+    const bucket = new Bucket(this, 'bucket', {
+      cors: [cors],
+      websiteIndexDocument: CONFIG.webSite.indexDocument,
+      websiteErrorDocument: CONFIG.webSite.errorDocument,
+      publicReadAccess: true,
+    });
   }
 }
